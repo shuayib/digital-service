@@ -31,6 +31,7 @@
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 600;
+            cursor: pointer;
         }
         nav a:hover {
             background-color: #3b5998;
@@ -49,13 +50,7 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .sector h2 {
-            margin-top: 0;
-        }
-        .sector p {
-            line-height: 1.7;
-            color: #666;
+            display: none;
         }
         footer {
             background-color: #2c3e50;
@@ -75,13 +70,13 @@
     </header>
 
     <nav>
-        <a href="#healthcare">Healthcare</a>
-        <a href="#education">Education</a>
-        <a href="#residential">Residential Management</a>
-        <a href="#labor">Skilled Labor</a>
-        <a href="#transport">Transport</a>
-        <a href="#realestate">Real Estate</a>
-        <a href="#delivery">Delivery Services</a>
+        <a data-section="healthcare">Healthcare</a>
+        <a data-section="education">Education</a>
+        <a data-section="residential">Residential Management</a>
+        <a data-section="labor">Skilled Labor</a>
+        <a data-section="transport">Transport</a>
+        <a data-section="realestate">Real Estate</a>
+        <a data-section="delivery">Delivery Services</a>
     </nav>
 
     <div class="container">
@@ -129,8 +124,32 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Digital Service Opportunities in Ethiopia | All rights reserved</p>
+        <p>&copy; 2024 Digital Service Opportunities in Ethiopia | Shuayib Abdulkadir | Maryland, USA 2024 | All rights reserved</p>
     </footer>
+
+    <script>
+        // Get all the nav links and sections
+        const links = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('.sector');
+
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+        }
+
+        // Add event listeners to all nav links
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+            });
+        });
+
+        // Show the first section by default
+        showSection('healthcare');
+    </script>
 
 </body>
 </html>
