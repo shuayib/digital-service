@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home - Digital Transformation in Ethiopia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         html, body {
             height: 100%;
@@ -34,13 +35,16 @@
             text-transform: uppercase;
             font-weight: 600;
             cursor: pointer;
-            flex-grow: 0;
-            flex-basis: auto;
+            flex-grow: 1;
             text-align: center;
         }
 
+        nav a:hover {
+            background-color: #3b5998;
+        }
+
         .container {
-            flex: 1;
+            flex: 1; /* Ensures this container takes up available space */
             width: 90%;
             margin: 0 auto;
             padding: 2rem 0;
@@ -57,11 +61,11 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: none;
+            display: none; /* Initially hide all sections */
         }
 
         #home {
-            display: block;
+            display: block; /* Display the home section by default */
             text-align: left;
             padding: 2rem;
         }
@@ -83,8 +87,7 @@
         /* Responsive design */
         @media (max-width: 768px) {
             nav a {
-                padding: 0.75rem 1rem;
-                flex: 1 0 auto;
+                flex-basis: 100%;
             }
 
             .container {
@@ -187,7 +190,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Technology Groups, Maryland, USA | October 2024 | All rights reserved</p>
+        <p>&copy; 2024 Digital Service Opportunities in Ethiopia | All rights reserved</p>
     </footer>
 
     <script>
