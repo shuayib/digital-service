@@ -13,18 +13,15 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-        header {
-            background-color: #3b5998;
-            color: #fff;
-            padding: 1.5rem 0;
-            text-align: center;
-        }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #2c3e50;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
         }
+
         nav a {
             color: #fff;
             padding: 1rem 1.5rem;
@@ -32,18 +29,25 @@
             text-transform: uppercase;
             font-weight: 600;
             cursor: pointer;
+            flex-grow: 1;
+            text-align: center;
         }
+
         nav a:hover {
             background-color: #3b5998;
         }
+
         .container {
             width: 90%;
             margin: 0 auto;
             padding: 2rem 0;
+            max-width: 1200px;
         }
+
         h1, h2, h3 {
             color: #34495e;
         }
+
         .sector {
             margin-bottom: 3rem;
             background-color: #fff;
@@ -52,27 +56,42 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             display: none;
         }
+
         #home {
             display: block;
-            text-align: center;
+            text-align: left;
             padding: 2rem;
         }
+
         footer {
             background-color: #2c3e50;
             color: #fff;
             text-align: center;
             padding: 1.5rem 0;
         }
+
         footer p {
             margin: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav a {
+                flex-basis: 100%;
+            }
+
+            .container {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .sector {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Digital Service Opportunities in Ethiopia</h1>
-    </header>
 
     <nav>
         <a data-section="home">Home</a>
@@ -87,51 +106,36 @@
 
     <div class="container">
         <section id="home" class="sector">
-            <h2>Welcome to Digital Service Opportunities in Ethiopia</h2>
-            <p>We are at the forefront of Ethiopia's digital transformation, driving innovation and economic growth through cutting-edge digital solutions. Our mission is to harness technology to improve lives, enhance public services, and boost Ethiopia's competitiveness in the global market.</p>
+            <h2>Digital Service Opportunities in Ethiopia</h2>
+            <p>Welcome to the forefront of Ethiopia's digital transformation. As one of Africa's fastest-growing economies, Ethiopia stands at the cusp of a digital revolution. Our platform is dedicated to driving this transformation, fostering innovation, and creating new economic opportunities through cutting-edge digital solutions across various sectors.</p>
+
+            <h3>Our Vision</h3>
+            <p>To build a digitally empowered Ethiopia, where technology bridges gaps, enhances public services, and drives sustainable economic growth. We envision an interconnected ecosystem where individuals, businesses, and the government leverage technology to improve efficiency and service delivery.</p>
+
+            <h3>Our Mission</h3>
+            <p>We are committed to harnessing technology's potential to improve the quality of life for Ethiopians, enhance public services, and boost the country's competitiveness in the global market. By addressing key challenges in healthcare, education, transportation, real estate, and skilled labor markets, we aim to develop sustainable and impactful solutions.</p>
+
+            <h3>Why Digital Transformation Matters</h3>
+            <p>In a globalized world, digital transformation is no longer an option—it is essential for growth and competitiveness. Ethiopia, with its vibrant population and emerging market, presents enormous potential for digital innovation. Our focus is on creating platforms that not only solve today's challenges but also prepare Ethiopia for a future driven by technology.</p>
+
+            <h3>Key Focus Areas</h3>
+            <p>Our platform highlights critical sectors in Ethiopia where digital transformation can create significant impact:</p>
+            <ul>
+                <li><strong>Healthcare:</strong> Streamlining patient care through centralized health record systems, telemedicine, and digital health services.</li>
+                <li><strong>Education:</strong> Enabling efficient student management, national curriculum alignment, and enhanced e-learning platforms for schools.</li>
+                <li><strong>Residential Property Management:</strong> Improving tenant and landlord communication through digital platforms for rent, maintenance, and incident reporting.</li>
+                <li><strong>Skilled Labor Marketplace:</strong> Creating a digital marketplace for connecting skilled professionals with customers in need of services such as plumbing, electrical work, and more.</li>
+                <li><strong>Transportation:</strong> Offering easy, digital ticketing and payment systems for long-distance travel between cities.</li>
+                <li><strong>Real Estate:</strong> Providing verified property listings, secure transactions, and real estate advisory services to buyers and sellers.</li>
+                <li><strong>Delivery Services:</strong> Supporting e-commerce growth with reliable and efficient last-mile delivery platforms.</li>
+            </ul>
+
+            <h3>Join Us in Building a Digital Future</h3>
+            <p>Whether you're an entrepreneur, a government agency, or a business looking to integrate digital services into your operations, we invite you to explore the opportunities Ethiopia offers. Together, we can shape the future and drive forward a prosperous, tech-driven Ethiopia.</p>
         </section>
 
-        <section id="healthcare" class="sector">
-            <h2>Healthcare Systems</h2>
-            <p><strong>Problem Statement:</strong> The healthcare system in Ethiopia suffers from fragmented patient record management and a lack of communication between hospitals, leading to inefficiencies in patient care.</p>
-            <p><strong>Opportunity:</strong> Develop a centralized health information exchange system for data sharing, online appointments, and telemedicine services to improve healthcare delivery.</p>
-        </section>
+        <!-- Other sections here (Healthcare, Education, etc.) -->
 
-        <section id="education" class="sector">
-            <h2>Education Systems</h2>
-            <p><strong>Problem Statement:</strong> Private schools lack comprehensive digital systems for managing student records, and there are no standardized communication protocols for data sharing.</p>
-            <p><strong>Opportunity:</strong> Create a school management system that digitizes student data, supports national curriculum alignment, and enhances communication between schools and the Ministry of Education.</p>
-        </section>
-
-        <section id="residential" class="sector">
-            <h2>Residential Property Management</h2>
-            <p><strong>Problem Statement:</strong> There is no centralized system for tenant management, rent tracking, or maintenance reporting in residential buildings.</p>
-            <p><strong>Opportunity:</strong> Implement a property management platform that offers rent payment tracking, maintenance scheduling, and streamlined communication between tenants and administrators.</p>
-        </section>
-
-        <section id="labor" class="sector">
-            <h2>Skilled Labor Market</h2>
-            <p><strong>Problem Statement:</strong> Customers have no reliable way to connect with skilled tradespeople (plumbers, electricians, etc.) through digital platforms.</p>
-            <p><strong>Opportunity:</strong> Create a marketplace for skilled workers to offer services, enable customer reviews, and provide secure appointment booking and payment options.</p>
-        </section>
-
-        <section id="transport" class="sector">
-            <h2>Transport Systems</h2>
-            <p><strong>Problem Statement:</strong> Booking transportation for long-distance travel is manual and lacks digital solutions for ticket booking and payment.</p>
-            <p><strong>Opportunity:</strong> Develop a transport marketplace that allows users to book tickets, pay online, and receive real-time travel updates for long-distance routes.</p>
-        </section>
-
-        <section id="realestate" class="sector">
-            <h2>Real Estate Market</h2>
-            <p><strong>Problem Statement:</strong> The property buying and selling process lacks secure, verified platforms, increasing the risk of fraud.</p>
-            <p><strong>Opportunity:</strong> Create a property marketplace with verified listings, legal advisory services, and secure payment options to ensure safe transactions.</p>
-        </section>
-
-        <section id="delivery" class="sector">
-            <h2>Delivery Services</h2>
-            <p><strong>Problem Statement:</strong> There is a lack of dedicated last-mile delivery platforms for e-commerce, resulting in inefficient order tracking and logistics.</p>
-            <p><strong>Opportunity:</strong> Develop a last-mile delivery platform that partners with e-commerce sites to provide real-time tracking, notifications, and cashless payment options.</p>
-        </section>
     </div>
 
     <footer>
